@@ -17,8 +17,20 @@
 */
 
 function dynamicSlice(start, end) {
-    
+    if(start < 0) start = 0;
+    return (array) => {
+        let res = [];
+        if(end > array.length) end = array.length;
+        for(let i = start; i < end; i++) {
+            res.push(array[i])
+        }
+        return res
+    }
 }
+
+const slicer = dynamicSlice(2,4);
+    console.log(slicer([0, 1, 2, 3])); // prints [ 2, 3 ]
+    console.log(slicer([2, 4, 'hello', false])); // prints ['hello', false]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
