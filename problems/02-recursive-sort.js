@@ -9,7 +9,20 @@
     console.log(sort([14, 5, 10, 6, 3, 4, 21, 16, 9])); // prints [ 3, 4, 5, 6, 9, 10, 14, 16, 21 ]
 */
 
-
+function sort(nums, sorted = []) {
+    if(nums.length === 0) return sorted;
+    let smallestIndex = 0;
+    for (let i = 0; i < nums.length; i++) {
+        let element = nums[i];
+        let smallestNum = nums[smallestIndex]
+        if(element < smallestNum) {
+            smallestIndex = i
+        }
+    }
+    sorted.push(nums[smallestIndex]);
+    nums.splice(smallestIndex, 1);
+    return sort(nums, sorted)
+}
 
     console.log(sort([5, 4, 3, 2, 1]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
