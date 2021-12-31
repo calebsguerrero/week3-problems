@@ -9,7 +9,7 @@
 */
 
 function evenNumberRange(num1, num2) {
-    
+
     let res = [];
     // if(num2 <= num1) return res;
     for(let i = num1; i <= num2; i++) {
@@ -19,7 +19,8 @@ function evenNumberRange(num1, num2) {
         }
     }
     return res
-}
+
+
 
 // console.log(evenNumberRange(-3, 2)); // prints [-2, 0, 2]
 // console.log(evenNumberRange(22, 25)); // prints [22, 24]

@@ -18,6 +18,7 @@
     to see if your code demonstrates the expected behavior.
 
 */
+
 function r2d2Speaks(code) {
 if(code.length === 0) return;
 
@@ -30,8 +31,9 @@ if(first === 0) {
     console.log('boop');
     delay = 800;
 }
+}
 
-setTimeout(r2d2Speaks, delay, code.slice(1));
+//setTimeout(r2d2Speaks, delay, code.slice(1));
     // for (let i = 0; i < arr.length; i++) {
     //     const el = arr[i];
     //     if(el === 0) {
@@ -44,7 +46,7 @@ setTimeout(r2d2Speaks, delay, code.slice(1));
     //         }, 800)
     //     }
     // }
-}
+//}
 // setTimeout(r2d2Speaks, 400)
 // setTimeout(r2d2Speaks, 800)
 
